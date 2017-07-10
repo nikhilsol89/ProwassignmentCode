@@ -12,11 +12,11 @@ public class MySqliteDBHelper extends SQLiteOpenHelper {
 
     private static MySqliteDBHelper instance;
 
-    public MySqliteDBHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
+    private MySqliteDBHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
 
-    public MySqliteDBHelper(Context context) {
+    private MySqliteDBHelper(Context context) {
         super(context, DatabaseMetaData.DATABASE_NAME, null, DatabaseMetaData.DATABASE_VERSION);
     }
 
